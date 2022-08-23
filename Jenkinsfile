@@ -13,12 +13,10 @@ pipeline {
 
     stage('npm test') {
       steps {
-          sh "npm test",
-          sh "mocha --exit"
+          sh "npm test"
         }
     }
-
-    }
+}
     // stage("git") {
     //   steps {
 
