@@ -4,9 +4,8 @@ pipeline {
   stages {
     stage("npm i") {
       steps {
-        withMaven(maven: "maven3") {
-          sh "mvn clean install"
-        }
+          sh "npm i"
+          echo 'ok'
       }
     }
   }
