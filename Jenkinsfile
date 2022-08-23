@@ -22,6 +22,12 @@ pipeline {
           sh "npm test"
         }
     }
+    stage('git') {
+      steps {
+          sh "git checkout Prod"
+          sh "git merge main"
+        }
+    }
 }
     // stage("git") {
     //   steps {
