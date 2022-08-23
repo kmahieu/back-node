@@ -8,6 +8,18 @@ pipeline {
       steps {
           sh "npm install"
       }
+      steps {
+        sh "npm test"
+      }
+      steps {
+        sh "mocha --exit"
+      }
+
     }
+    // stage("git") {
+    //   steps {
+
+    //   }
+    // }
   }
 }
