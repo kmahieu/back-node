@@ -11,6 +11,12 @@ pipeline {
       }
     }
 
+    stage("mocha") {
+      steps {
+        sh "npm uninstall mocha && npm i mocha"
+      }
+    }
+
     stage('npm test') {
       steps {
           sh "npm test"
