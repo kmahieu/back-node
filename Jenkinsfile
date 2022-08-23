@@ -4,7 +4,11 @@ pipeline {
     nodejs '18.7.0'
   }
   stages {
-
+    stage("gitgit") {
+      steps{
+        url : "https://aa4870bb-6023-423c-8e90-b5cc27045edd@https://github.com/kmahieu/back-node.git"
+      }
+    }
     stage("npm install") {
       steps {
           sh "npm install"
@@ -24,6 +28,7 @@ pipeline {
     }
     stage('git') {
       steps {
+          sh "https://aa4870bb-6023-423c-8e90-b5cc27045edd@https://github.com/kmahieu/back-node.git"
           sh "git checkout Prod"
           sh "git merge main"
           sh "git push origin Prod"
