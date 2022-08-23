@@ -28,7 +28,7 @@ app.use(
   );
 
 const CONNECTION_URL = 'mongodb+srv://admin:admin@cluster0.yf65c.mongodb.net/jenkinsUser?retryWrites=true&w=majority';
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4040;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`)))
