@@ -2,10 +2,11 @@ pipeline {
   agent any
 
   stages {
-    stage("npm i") {
+    stage("npm") {
       steps {
-          sh "npm i"
-          echo 'ok'
+        withMaven(maven: "maven3") {
+          sh "npm install"
+        }
       }
     }
   }
