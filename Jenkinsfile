@@ -4,15 +4,18 @@ pipeline {
     nodejs '18.7.0'
   }
   stages {
+
     stage("npm install") {
       steps {
           sh "npm install"
       }
+    }
+
     stage('npm test') {
-        steps {
-                sh "npm test",
-                sh "mocha --exit"
-              }
+      steps {
+          sh "npm test",
+          sh "mocha --exit"
+        }
     }
 
     }
@@ -22,4 +25,3 @@ pipeline {
     //   }
     // }
   }
-}
