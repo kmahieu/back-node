@@ -26,7 +26,7 @@ pipeline {
       steps {
           sh "git checkout Prod"
           sh "git checkout main"
-          sh "git merge origin Prod"
+          sh "git merge Prod"
         }
     }
 }
