@@ -7,7 +7,7 @@ pipeline {
     stage("git") {
       steps{
         git branch : "main"
-        url : "https://aa4870bb-6023-423c-8e90-b5cc27045edd@github.com/kmahieu/back-node.git"
+        git url : "https://aa4870bb-6023-423c-8e90-b5cc27045edd@github.com/kmahieu/back-node.git"
       }
     }
     stage("npm install") {
