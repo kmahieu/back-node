@@ -12,21 +12,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', userRoutes);
 
-app.use(
-    cors({ 
-        Origin: 'http://localhost:5000', 
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        allowedHeaders: [
-            'Content-Type', 
-            'Authorization', 
-            'Origin', 
-            'x-access-token', 
-            'XSRF-TOKEN'
-        ], 
-        preflightContinue: false
-    })
-  );
-
 const CONNECTION_URL = 'mongodb+srv://admin:admin@cluster0.yf65c.mongodb.net/jenkinsUser?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 4040;
 
