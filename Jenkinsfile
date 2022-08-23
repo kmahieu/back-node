@@ -24,9 +24,9 @@ pipeline {
     }
     stage('git') {
       steps {
-          sh "git checkout main"
           sh "git checkout Prod"
           sh "git merge main"
+          sh "git push origin Prod"
         }
     }
 }
