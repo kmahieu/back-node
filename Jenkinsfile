@@ -1,12 +1,12 @@
 pipeline {
   agent any
-
+  tools {
+    nodejs '18.7.0'
+  }
   stages {
-    stage("npm") {
+    stage("npm i") {
       steps {
-        withMaven(maven: "maven3") {
-          sh "npm install"
-        }
+          sh "npm i"
       }
     }
   }
