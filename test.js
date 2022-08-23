@@ -17,12 +17,12 @@ describe('User test', function()
         });
     });
 
-    // describe("GET /users", function() {
-    //     it("user get", function(done) {
-    //         request(app)
-    //         .get('/users')
-    //     .expect(200, done);
-    //     });
-    // });
+    describe("GET /users", function() {
+        it("user get", function(done) {
+            request(app)
+            .get('/users')
+        .expect(200, done);
+        });
+    });
 
 })
