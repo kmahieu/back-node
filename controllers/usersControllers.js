@@ -22,7 +22,7 @@ export const getUser = async (req, res) => {
         res.status(404).json({ message: error.message});
     }
 }
-
+//wesh
 export const createUsers = async (req, res) => {
     const body = req.body;
     const newUser = new User(body);
