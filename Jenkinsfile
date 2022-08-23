@@ -4,7 +4,7 @@ pipeline {
     nodejs '18.7.0'
   }
   stages {
-    stage("gitgit") {
+    stage("git") {
       steps{
         git branch : "main", url : "https://aa4870bb-6023-423c-8e90-b5cc27045edd@https://github.com/kmahieu/back-node.git"
       }
@@ -26,7 +26,7 @@ pipeline {
           sh "npm test"
         }
     }
-    stage('git') {
+    stage('git merge') {
       steps {
           sh "git checkout Prod"
           sh "git merge main"
