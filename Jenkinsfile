@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage("git") {
       steps {
-        git branch : "main", url : "https://aa4870bb-6023-423c-8e90-b5cc27045edd@github.com/kmahieu/back-node.git"
+        git branch : "main", url : "https://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@github.com/kmahieu/back-node.git"
       }
     }
 
